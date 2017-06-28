@@ -1,0 +1,6 @@
+stravaweb:
+  container_name: stravaweb
+  image: egoexpress/strava-webhookevent-endpoint
+  restart: on-failure:10
+  expose:
+    - "80"
