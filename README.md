@@ -25,6 +25,21 @@ curl -X POST https://api.strava.com/api/v3/push_subscriptions \
   -F 'verify_token=STRAVA'
  ```
  
+ If everything works as expected you should get a reply like this:
+ 
+ ```
+ {
+   "id":424242,
+   "resource_state":2,
+   "application_id":9999,
+   "aspect_type":"create",
+   "object_type":"activity",
+   "callback_url":"https://your-webserver.cx/strava",
+   "created_at":"2017-06-28T17:33:36.308171157Z",
+   "updated_at":"2017-06-28T17:33:36.308170585Z"
+ }
+ ```
+ 
  * Create a new activity on Strava and watch the access of your OpenResty instance for a callback from Strava.
  
  # Todo
